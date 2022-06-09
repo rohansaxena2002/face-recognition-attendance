@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MLFRAS</title>
+    <style>
+      .body {
+        background-color: #0093e9;
+        background-image: linear-gradient(161deg, #0093e9 0%, #80d0c7 100%);
+        display: flex;
+        margin-left: 25%;
+      }
+      .hname {
+        font-family: OCR A Std, monospace;
+        margin-top: 25px;
+        margin-left: 20%;
+      }
+      .video {
+        margin-top: 25px;
+        border-radius: 25px;
+        margin-left: 13%;
+      }
+      .attendence {
+        margin-top: 25px;
+        margin-left: 40%;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <div class="container">
+      <div class="vid">
+        <h1 class="hname">
+          Machine Learning Face Recognition Attendance System
+        </h1>
+        <img class="video" src="{{ url_for('video_feed') }}" />
+        <div class="attendence">
+          <button>
+            <a href="{{ url_for('download_attendance') }}"
+              >Download Attendance</a
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
